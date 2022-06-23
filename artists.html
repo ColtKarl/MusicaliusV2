@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкалиус</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__block–date">
+            <div class="header__text–date">
+                <div class="text–date__text1">На дворе</div>
+                <div class="text–date__number">
+                    <div class="text–date__elem1">
+                        <div class="elem1__square">
+                            <div class="elem1__number">
+                                <?=date('d');?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text–date__elem2">
+                        <div class="elem2__square">
+                            <div class="elem2__number">
+                                <?=date('m');?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text–date__elem3">
+                        <div class="elem3__square">
+                            <div class="elem3__number">
+                                <?=date('y');?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text–date__text2">и день рождения у 20 исполнителей</div>
+                <div class="text–date__button">
+                    <a class="button__text" href="/artists.html">Смотреть всех</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__under–container">
+            <a href="/index.html" class="under–container__logo">Музыкалиус</a>
+            <div class="under–container__right">
+                <span class="right__artists-active">Все исполнители</span>
+                <label class="search">
+                    <input type="text" name="search" placeholder="Поиск по исполнителю">
+                    <svg class="search__btn" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.417 3.7a5.717 5.717 0 1 0 0 11.433 5.717 5.717 0 0 0 0-11.433ZM2.3 9.417a7.117 7.117 0 1 1 12.62 4.513l3.825 3.825a.7.7 0 0 1-.99.99L13.93 14.92A7.117 7.117 0 0 1 2.3 9.417Z" fill="#A9A9A9"/></svg>
+                </label>
+                <div class="right__line"></div>
+                <button class="right__theme">
+                    <div class="theme__container"><svg class="theme__sun" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.00001 4.49164C6.51405 4.49164 4.49164 6.51445 4.49164 9.00041C4.49164 11.4864 6.51405 13.5092 9.00001 13.5092C11.4856 13.5092 13.5084 11.4868 13.5084 9.00041C13.5084 6.51405 11.4856 4.49164 9.00001 4.49164Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M8.99997 3.16634C8.5141 3.16634 8.1203 2.77254 8.1203 2.28707V0.879672C8.1203 0.3938 8.5141 0 8.99997 0C9.48585 0 9.87965 0.3938 9.87965 0.879672V2.28707C9.87965 2.77254 9.48545 3.16634 8.99997 3.16634Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M8.99997 14.8333C8.5141 14.8333 8.1203 15.2271 8.1203 15.7129V17.1199C8.1203 17.6062 8.5141 18 8.99997 18C9.48585 18 9.87965 17.6062 9.87965 17.1199V15.7129C9.87965 15.2271 9.48545 14.8333 8.99997 14.8333Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M13.1245 4.87507C12.7813 4.53149 12.7813 3.97467 13.1245 3.63109L14.1198 2.63583C14.463 2.29265 15.0202 2.29265 15.3637 2.63583C15.7073 2.97941 15.7073 3.53663 15.3637 3.87981L14.3685 4.87507C14.0253 5.21865 13.4685 5.21865 13.1245 4.87507Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M4.87507 13.1253C4.53149 12.7813 3.97467 12.7813 3.63109 13.1253L2.63583 14.1202C2.29265 14.4634 2.29225 15.021 2.63583 15.3642C2.97941 15.7073 3.53663 15.7073 3.87981 15.3642L4.87507 14.3685C5.21865 14.0253 5.21865 13.4681 4.87507 13.1253Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M14.8333 9C14.8333 8.51413 15.2271 8.12033 15.7129 8.12033H17.1203C17.6062 8.12033 18 8.51413 18 9C18 9.48588 17.6062 9.87928 17.1203 9.87928H15.7129C15.2271 9.87928 14.8333 9.48588 14.8333 9Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M3.16634 9C3.16634 8.51413 2.77254 8.12033 2.28667 8.12033H0.879672C0.3938 8.12033 0 8.51413 0 9C0 9.48588 0.3938 9.87928 0.879672 9.87928H2.28707C2.77254 9.87928 3.16634 9.48588 3.16634 9Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M13.1245 13.1253C13.4681 12.7822 14.0253 12.7822 14.3685 13.1253L15.3637 14.1206C15.7073 14.4634 15.7073 15.021 15.3637 15.3642C15.0202 15.7074 14.4633 15.7074 14.1198 15.3642L13.1245 14.3689C12.7809 14.0253 12.7809 13.4685 13.1245 13.1253Z"
+                                fill="#BABABA" />
+                            <path
+                                d="M4.8751 4.87506C5.21867 4.53149 5.21867 3.97467 4.8751 3.63109L3.87983 2.63622C3.53626 2.29265 2.97944 2.29265 2.63586 2.63622C2.29228 2.9794 2.29228 3.53662 2.63586 3.8798L3.63112 4.87506C3.9747 5.21904 4.53152 5.21904 4.8751 4.87506Z"
+                                fill="#BABABA" />
+                        </svg>
+
+                        <svg class="theme__moon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.8496 9.00558C14.7023 8.96859 14.555 9.00558 14.4261
+                     9.09803C13.9473 9.50483 13.3949 9.83766 12.7873 10.0596C12.2164 
+                     10.2814 11.5904 10.3924 10.9275 10.3924C9.43598 10.3924 8.07337 
+                     9.78219 7.09745 8.80218C6.12153 7.82217 5.51388 6.45385 5.51388 
+                     4.95609C5.51388 4.32741 5.62436 3.71721 5.80849 3.16249C6.01104 
+                     2.57078 6.30566 2.03455 6.69235 1.57228C6.85807 1.36888 6.82124 
+                     1.07303 6.61869 0.906613C6.4898 0.814159 6.34249 0.777178 6.19518 
+                     0.814159C4.63002 1.23945 3.26741 2.18248 2.29149 3.43985C1.3524 
+                     4.67873 0.799988 6.21347 0.799988 7.87764C0.799988 9.89313 1.61019 
+                     11.7237 2.93597 13.0551C4.26175 14.3864 6.06628 15.2 8.09178 15.2C9.78584 
+                     15.2 11.351 14.6083 12.6031 13.6283C13.8737 12.6298 14.7943 11.206 15.181 
+                     9.57879C15.2547 9.31992 15.1074 9.06105 14.8496 9.00558Z" fill="black" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main" style="margin-top: 80px;">
+        <div class="gropus__main">
+            <div class="groups__title">
+                <div class="groups__name">Исполнители</div>
+                <div class="groups__filter">
+                    <a class="groups__button–genre" href="">
+                        <svg class="filter__btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 7.19999C15.5059 7.19999 14.7 8.00588 14.7 8.99999C14.7 9.9941 15.5059 10.8 16.5 10.8C17.4942 10.8 18.3 9.9941 18.3 8.99999C18.3 8.00588 17.4942 7.19999 16.5 7.19999ZM13.3 8.99999C13.3 7.23268 14.7327 5.79999 16.5 5.79999C18.0614 5.79999 19.3616 6.91823 19.6434 8.39752C19.7479 8.33556 19.8698 8.29999 20 8.29999H21C21.3866 8.29999 21.7001 8.61339 21.7001 8.99999C21.7001 9.38659 21.3866 9.69999 21 9.69999H20C19.8698 9.69999 19.7479 9.66442 19.6434 9.60246C19.3616 11.0817 18.0614 12.2 16.5 12.2C14.7327 12.2 13.3 10.7673 13.3 8.99999ZM2.30005 8.99999C2.30005 8.61339 2.61345 8.29999 3.00005 8.29999H10C10.3866 8.29999 10.7 8.61339 10.7 8.99999C10.7 9.38659 10.3866 9.69999 10 9.69999H3.00005C2.61345 9.69999 2.30005 9.38659 2.30005 8.99999ZM7.50005 13.2C6.50594 13.2 5.70005 14.0059 5.70005 15C5.70005 15.9941 6.50594 16.8 7.50005 16.8C8.49416 16.8 9.30005 15.9941 9.30005 15C9.30005 14.0059 8.49416 13.2 7.50005 13.2ZM4.37684 14.3C4.69609 12.8694 5.97319 11.8 7.50005 11.8C9.26736 11.8 10.7 13.2327 10.7 15C10.7 16.7673 9.26736 18.2 7.50005 18.2C5.97319 18.2 4.69609 17.1306 4.37684 15.7H3.00005C2.61345 15.7 2.30005 15.3866 2.30005 15C2.30005 14.6134 2.61345 14.3 3.00005 14.3H4.37684ZM13.3 15C13.3 14.6134 13.6134 14.3 14 14.3L21 14.3C21.3866 14.3 21.7001 14.6134 21.7001 15C21.7001 15.3866 21.3866 15.7 21 15.7L14 15.7C13.6134 15.7 13.3 15.3866 13.3 15Z" fill="#A9A9A9"/>
+                            </svg>
+                        <p class="genre__text">Все жанры</p>
+                    </a>
+                    <div class="groups__date">
+                        <button class="date__left"><svg width="7" height="12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.96.626A1 1 0 1 1 6.374 2.04L4.96.626ZM1 6l-.707.707a1 1 0 0 1 0-1.414L1 
+                        6Zm5.374 3.96a1 1 0 0 1-1.414 1.414L6.374 9.96Zm0-7.92L1.707 6.707.293 5.293 
+                        4.96.626 6.374 2.04ZM1.707 5.293 6.374 9.96 4.96 11.374.293 6.707l1.414-1.414Z" fill="#000" />
+                            </svg>
+                        </button>
+                        <button class="date__more">
+                            <p class="date__more–text"><?=date('d');?>.<?=date('m');?>.<?=date('y');?></p>
+                            <svg class="date__more–svg" width="18" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0a.8.8 0 0 1 .8.8V2h6.4V.8a.8.8 0 1 1 1.6 0V2H16a1.8 1.8 0 0 1 1.8 1.8v14a1.8 1.8 0 0 1-1.8 1.8H2a1.8 1.8 0 0 1-1.8-1.8v-14A1.8 1.8 0 0 1 2 2h2.2V.8A.8.8 0 0 1 5 0ZM2 3.6a.2.2 0 0 0-.2.2V6h14.4V3.8a.2.2 0 0 0-.2-.2H2Zm14.2 4H1.8v10.2c0 .11.09.2.2.2h14a.2.2 0 0 0 .2-.2V7.6Z" fill="#A9A9A9"/></svg>
+                        </button>
+                        <button class="date__right"><svg width="7" height="12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.333 5.667 6 1 10.667" stroke="#000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="groups–grid">
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                <a href="/artist.html" class="group–card">
+                    <img class="card__img" src="/assets/images/A-56798-1169678918.jpg" alt="">
+                    <h3 class="card__name">The Doors</h3>
+                </a>
+                
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="container__content">
+                <div class="container__logo">2022 © МУЗЫКАЛИУС</div>
+                <div class="container__links">
+                    <a class="links__project" href="">О проекте</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="bugreport">
+        <div class="bugreport__container">
+            <img class="bugreport__container-img" src="/assets/images/face-with-monocle-apple.png" alt="">
+            <p class="bugreport__container-text">Нашли ошибку?</p>
+        </div>
+    </button>
+    <script src="/JavaScript/theme.js"></script>
+</body>
+
+</html>
